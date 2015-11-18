@@ -1,1 +1,29 @@
-@import 'reset'
+@import 'reset';
+
+@import 'header';
+@import 'wrapper';
+@import 'main';
+@import 'sidemenu';
+@import 'footer';
+
+@import 'utility';
+
+// 確認用のスタイル
+.header,
+.main,
+.sidemenu,
+.footer {
+  border: 1px solid #aaa;
+  background-color: #ccc;
+}
+
+.header,
+.footer {
+  height: 100px;
+}
+
+.main,
+.sidemenu {
+  height: 500px;
+}
+
