@@ -1,0 +1,8 @@
+header.header
+  h1.logo
+    a(href="/") SAMPLE SITE
+  nav.global-nav
+    ul
+      each nav, i in ['HOME', 'ABOUT', 'NEWS', 'TOPICS', 'DOCS', 'BLOG']
+        li.nav-item(class="#{i == 0 ? 'active' : ''}")
+          a(href="#")= nav

@@ -5,14 +5,7 @@ html(lang="ja")
     title スタンダードレイアウト
     link(rel='stylesheet', href='styles/style.css', media='all')
   body
-    header.header
-      h1.logo
-        a(href="/") SAMPLE SITE
-      nav.global-nav
-        ul
-          each nav, i in ['HOME', 'ABOUT', 'NEWS', 'TOPICS', 'DOCS', 'BLOG']
-            li.nav-item(class="#{i == 0 ? 'active' : ''}")
-              a(href="#")= nav
+    include partials/header
 
     .wrapper.clearfix
       main.main
