@@ -1,16 +1,16 @@
 - docs = {}
-- docs[0] = {heading: 'HTML5', list: true, ul: ['追加された要素', '削除された要素', '意味が変わった要素', 'HTML5のコンテンツモデル']}
-- docs[1] = {heading: 'CSS3', list: true, ul: ['追加されたプロパティ', '追加されたセレクタ', '追加された単位']}
-- docs[2] = {heading: 'JavaScript', list: true, ul: ['JavaScriptの言語仕様', 'ECMAScriptとは？', 'jQueryとは？']}
-- docs[3] = {heading: 'Sass, Less, Stylus', list: false}
-- docs[4] = {heading: 'TypeScript', list: false}
+- docs[0] = {heading: 'HTML5', ul: ['追加された要素', '削除された要素', '意味が変わった要素', 'HTML5のコンテンツモデル']}
+- docs[1] = {heading: 'CSS3', ul: ['追加されたプロパティ', '追加されたセレクタ', '追加された単位']}
+- docs[2] = {heading: 'JavaScript', ul: ['JavaScriptの言語仕様', 'ECMAScriptとは？', 'jQueryとは？']}
+- docs[3] = {heading: 'Sass, Less, Stylus', ul: []}
+- docs[4] = {heading: 'TypeScript', ul: []}
 
 h2.heading DOCUMENTS
 ul.documents
   each doc, i in docs
     li
       h3.title= doc.heading
-      if doc.list
+      if doc.ul.length > 0
         ul
           each list, j in doc.ul
             li
