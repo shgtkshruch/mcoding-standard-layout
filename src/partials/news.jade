@@ -1,0 +1,15 @@
+h2.heading NEWS
+- news = {}
+- news[0] = {datetime: '2015-08-23', date: '2015.08.23 SUN', category: 'NEWS', categoryClass: 'news', title: 'WORKSを更新しました。'}
+- news[1] = {datetime: '2015-08-12', date: '2015.08.12 WED', category: 'TOPIC', categoryClass: '', title: 'CSSでここまでできる！？ホントに使えるCSSセレクタ10選！'}
+- news[2] = {datetime: '2015-08-04', date: '2015.08.04 TUE', category: 'NEWS', categoryClass: 'news', title: 'TOPICSを更新しました。'}
+- news[3] = {datetime: '2015-07-25', date: '2015.07.25 SAT', category: 'TOPIC', categoryClass: '', title: 'HTML/CSSのコーディングと切っても切れないWebブラウザのシェア動向をチェックしよう'}
+- news[4] = {datetime: '2015-07-09', date: '2015.07.09 THU', category: 'TOPIC', categoryClass: '', title: 'HTML5の新しい属性で手軽にフォームバリデーション'}
+- news[5] = {datetime: '2015-06-30', date: '2015.07.30 TUE', category: 'NEWS', categoryClass: 'news', title: 'WORKSを更新しました。'}
+ul.scroll-list
+  each ns, i in news
+    li.scroll-item
+      a(href="#")
+        time.date(datetime="#{ns.datetime}")= ns.date
+        span.category(class="#{ns.categoryClass}")= ns.category
+        span.title= ns.title
