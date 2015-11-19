@@ -3,6 +3,11 @@
 [「HTML5/CSS3モダンコーディング フロントエンドエンジニアが教える3つの本格レイアウト」](http://www.shoeisha.co.jp/book/detail/9784798141572)
 のスタンダードレイアウトをコーディングしたリポジトリです。
 
+## Demo Site
+デモサイト
+
+[http://shgtkshruch.github.io/mcoding-standard-layout](http://shgtkshruch.github.io/mcoding-standard-layout)
+
 ## Build
 
 このプロジェクトをビルドするためには[node.js](https://nodejs.org/en/)と[gulp](http://gulpjs.com/)が必要です。
