@@ -3,6 +3,7 @@
   list-style-type: none;
   counter-reset: ranking;
   .ranking-item {
+    position: relative;
     margin-top: 15px;
     a {
       display: block;
@@ -18,7 +19,7 @@
       border: none;
       color: #fff;
       font-weight: normal;
-      line-height: 18px;
+      line-height: 20px;
     }
     &:nth-of-type(1) .order {
       background-color: #dab413;
@@ -33,30 +34,30 @@
   .image {
     width: 55px;
     height: 55px;
+    margin-right: 20px;
   }
   .order {
-    display: inline-block;
-    width: 18px;
-    height: 18px;
-    margin: 0 10px;
+    position: absolute;
+    top: -9px;
+    left: 44px;
+    width: 20px;
+    height: 20px;
     border: 1px solid #ccc;
+    border-radius: 50%;
+    background-color: #fff;
     color: #aaa;
-    vertical-align: 20px;
     text-align: center;
     font-weight: bold;
-    line-height: 16px;
-    transform: rotate(45deg);
+    line-height: 18px;
     &::before {
       content: counter(ranking);
       counter-increment: ranking;
-      display: inline-block;
       font-size: 1.0rem;
-      transform: rotate(-45deg);
     }
   }
   .text {
     display: inline-block;
-    width: 182px;
+    width: 200px;
     color: #000;
     vertical-align: top;
     font-size: 1.2rem;
