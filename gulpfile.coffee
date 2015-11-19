@@ -29,15 +29,6 @@ gulp.task 'wiredep', ->
     .pipe wiredep()
     .pipe gulp.dest config.src
 
-gulp.task 'html', ['jade'], ->
-  assets = $.useref.assets()
-  gulp.src config.dest + '/index.html'
-    .pipe wiredep()
-    .pipe assets
-    .pipe assets.restore()
-    .pipe $.useref()
-    .pipe gulp.dest config.dest
-
 gulp.task 'jade', ->
   gulp.src config.src + '/**/*.jade'
     .pipe $.plumber()
@@ -97,7 +88,7 @@ gulp.task 'default', ['jade', 'sass', 'coffee', 'image', 'browser-sync'], ->
   gulp.watch config.src + '/scripts/*.coffee', ['coffee']
   gulp.watch config.src + '/images/*', ['image']
 
-gulp.task 'prebuild', ['html', 'sass', 'coffee', 'image']
+gulp.task 'prebuild', ['jade', 'sass', 'coffee', 'image']
 
 gulp.task 'build', ['prebuild'], ->
   gulp.start 'clean'
